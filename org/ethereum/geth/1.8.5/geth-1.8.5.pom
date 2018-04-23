@@ -1,0 +1,737 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.ethereum</groupId>
+  <artifactId>geth</artifactId>
+  <version>1.8.5</version>
+  <packaging>aar</packaging>
+
+  <name>Android Ethereum Client</name>
+  <description>Android port of the go-ethereum libraries and node</description>
+  <url>https://github.com/ethereum/go-ethereum</url>
+  <inceptionYear>2015</inceptionYear>
+
+  <licenses>
+    <license>
+      <name>GNU Lesser General Public License, Version 3.0</name>
+      <url>https://www.gnu.org/licenses/lgpl-3.0.en.html</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <organization>
+    <name>Ethereum</name>
+    <url>https://ethereum.org</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <id>karalabe</id>
+      <name>Péter Szilágyi</name>
+      <email>peterke@gmail.com</email>
+      <url>https://github.com/karalabe</url>
+      <properties>
+        <picUrl>https://www.gravatar.com/avatar/2ecbf0f5b4b79eebf8c193e5d324357f?s=256</picUrl>
+      </properties>
+    </developer>
+  </developers>
+
+  <contributors>
+    <contributor>
+      <name>Afri Schoedon</name>
+      <email>5chdn@users.noreply.github.com</email>
+    </contributor>
+    <contributor>
+      <name>Agustin Armellini Fischer</name>
+      <email>armellini13@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Airead</name>
+      <email>fgh1987168@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Alan Chen</name>
+      <email>alanchchen@users.noreply.github.com</email>
+    </contributor>
+    <contributor>
+      <name>Alejandro Isaza</name>
+      <email>alejandro.isaza@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Ales Katona</name>
+      <email>ales@coinbase.com</email>
+    </contributor>
+    <contributor>
+      <name>Alex Leverington</name>
+      <email>alex@ethdev.com</email>
+    </contributor>
+    <contributor>
+      <name>Alex Wu</name>
+      <email>wuyiding@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Alexandre Van de Sande</name>
+      <email>alex.vandesande@ethdev.com</email>
+    </contributor>
+    <contributor>
+      <name>Ali Hajimirza</name>
+      <email>Ali92hm@users.noreply.github.com</email>
+    </contributor>
+    <contributor>
+      <name>Anton Evangelatov</name>
+      <email>anton.evangelatov@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Arba Sasmoyo</name>
+      <email>arba.sasmoyo@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Armani Ferrante</name>
+      <email>armaniferrante@berkeley.edu</email>
+    </contributor>
+    <contributor>
+      <name>Armin Braun</name>
+      <email>me@obrown.io</email>
+    </contributor>
+    <contributor>
+      <name>Aron Fischer</name>
+      <email>github@aron.guru</email>
+    </contributor>
+    <contributor>
+      <name>Bas van Kervel</name>
+      <email>bas@ethdev.com</email>
+    </contributor>
+    <contributor>
+      <name>Benjamin Brent</name>
+      <email>benjamin@benjaminbrent.com</email>
+    </contributor>
+    <contributor>
+      <name>Benoit Verkindt</name>
+      <email>benoit.verkindt@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Bo</name>
+      <email>bohende@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Bo Ye</name>
+      <email>boy.e.computer.1982@outlook.com</email>
+    </contributor>
+    <contributor>
+      <name>Bob Glickstein</name>
+      <email>bobg@users.noreply.github.com</email>
+    </contributor>
+    <contributor>
+      <name>Brian Schroeder</name>
+      <email>bts@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Casey Detrio</name>
+      <email>cdetrio@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Chase Wright</name>
+      <email>mysticryuujin@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Christoph Jentzsch</name>
+      <email>jentzsch.software@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Daniel A. Nagy</name>
+      <email>nagy.da@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Daniel Sloof</name>
+      <email>goapsychadelic@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Darrel Herbst</name>
+      <email>dherbst@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Dave Appleton</name>
+      <email>calistralabs@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Diego Siqueira</name>
+      <email>DiSiqueira@users.noreply.github.com</email>
+    </contributor>
+    <contributor>
+      <name>Dmitry Shulyak</name>
+      <email>yashulyak@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Egon Elbre</name>
+      <email>egonelbre@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Elias Naur</name>
+      <email>elias.naur@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Elliot Shepherd</name>
+      <email>elliot@identitii.com</email>
+    </contributor>
+    <contributor>
+      <name>Enrique Fynn</name>
+      <email>enriquefynn@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Ernesto del Toro</name>
+      <email>ernesto.deltoro@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Ethan Buchman</name>
+      <email>ethan@coinculture.info</email>
+    </contributor>
+    <contributor>
+      <name>Eugene Valeyev</name>
+      <email>evgen.povt@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Evangelos Pappas</name>
+      <email>epappas@evalonlabs.com</email>
+    </contributor>
+    <contributor>
+      <name>Evgeny Danilenko</name>
+      <email>6655321@bk.ru</email>
+    </contributor>
+    <contributor>
+      <name>Fabian Vogelsteller</name>
+      <email>fabian@frozeman.de</email>
+    </contributor>
+    <contributor>
+      <name>Fabio Barone</name>
+      <email>fabio.barone.co@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Fabio Berger</name>
+      <email>fabioberger1991@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>FaceHo</name>
+      <email>facehoshi@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Felix Lange</name>
+      <email>fjl@twurst.com</email>
+    </contributor>
+    <contributor>
+      <name>Fiisio</name>
+      <email>liangcszzu@163.com</email>
+    </contributor>
+    <contributor>
+      <name>Frank Wang</name>
+      <email>eternnoir@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Furkan KAMACI</name>
+      <email>furkankamaci@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Gary Rong</name>
+      <email>garyrong0905@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>George Ornbo</name>
+      <email>george@shapeshed.com</email>
+    </contributor>
+    <contributor>
+      <name>Gregg Dourgarian</name>
+      <email>greggd@tempworks.com</email>
+    </contributor>
+    <contributor>
+      <name>Guillaume Ballet</name>
+      <email>gballet@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Guillaume Nicolas</name>
+      <email>guin56@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Gustav Simonsson</name>
+      <email>gustav.simonsson@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Hao Bryan Cheng</name>
+      <email>haobcheng@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Henning Diedrich</name>
+      <email>hd@eonblast.com</email>
+    </contributor>
+    <contributor>
+      <name>Isidoro Ghezzi</name>
+      <email>isidoro.ghezzi@icloud.com</email>
+    </contributor>
+    <contributor>
+      <name>Ivan Daniluk</name>
+      <email>ivan.daniluk@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Jae Kwon</name>
+      <email>jkwon.work@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Jamie Pitts</name>
+      <email>james.pitts@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Janoš Guljaš</name>
+      <email>janos@users.noreply.github.com</email>
+    </contributor>
+    <contributor>
+      <name>Jason Carver</name>
+      <email>jacarver@linkedin.com</email>
+    </contributor>
+    <contributor>
+      <name>Jay Guo</name>
+      <email>guojiannan1101@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Jeff R. Allen</name>
+      <email>jra@nella.org</email>
+    </contributor>
+    <contributor>
+      <name>Jeffrey Wilcke</name>
+      <email>jeffrey@ethereum.org</email>
+    </contributor>
+    <contributor>
+      <name>Jens Agerberg</name>
+      <email>github@agerberg.me</email>
+    </contributor>
+    <contributor>
+      <name>Jia Chenhui</name>
+      <email>jiachenhui1989@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Jim McDonald</name>
+      <email>Jim@mcdee.net</email>
+    </contributor>
+    <contributor>
+      <name>Joel Burget</name>
+      <email>joelburget@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Jonathan Brown</name>
+      <email>jbrown@bluedroplet.com</email>
+    </contributor>
+    <contributor>
+      <name>Joseph Chow</name>
+      <email>ethereum@outlook.com</email>
+    </contributor>
+    <contributor>
+      <name>Justin Clark-Casey</name>
+      <email>justincc@justincc.org</email>
+    </contributor>
+    <contributor>
+      <name>Justin Drake</name>
+      <email>drakefjustin@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Kenji Siu</name>
+      <email>kenji@isuntv.com</email>
+    </contributor>
+    <contributor>
+      <name>Kobi Gurkan</name>
+      <email>kobigurk@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Konrad Feldmeier</name>
+      <email>konrad@brainbot.com</email>
+    </contributor>
+    <contributor>
+      <name>Kurkó Mihály</name>
+      <email>kurkomisi@users.noreply.github.com</email>
+    </contributor>
+    <contributor>
+      <name>Kyuntae Ethan Kim</name>
+      <email>ethan.kyuntae.kim@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Lefteris Karapetsas</name>
+      <email>lefteris@refu.co</email>
+    </contributor>
+    <contributor>
+      <name>Leif Jurvetson</name>
+      <email>leijurv@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Leo Shklovskii</name>
+      <email>leo@thermopylae.net</email>
+    </contributor>
+    <contributor>
+      <name>Lewis Marshall</name>
+      <email>lewis@lmars.net</email>
+    </contributor>
+    <contributor>
+      <name>Lio李欧</name>
+      <email>lionello@users.noreply.github.com</email>
+    </contributor>
+    <contributor>
+      <name>Louis Holbrook</name>
+      <email>dev@holbrook.no</email>
+    </contributor>
+    <contributor>
+      <name>Luca Zeug</name>
+      <email>luclu@users.noreply.github.com</email>
+    </contributor>
+    <contributor>
+      <name>Magicking</name>
+      <email>s@6120.eu</email>
+    </contributor>
+    <contributor>
+      <name>Maran Hidskes</name>
+      <email>maran.hidskes@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Marek Kotewicz</name>
+      <email>marek.kotewicz@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Mark</name>
+      <email>markya0616@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Martin Holst Swende</name>
+      <email>martin@swende.se</email>
+    </contributor>
+    <contributor>
+      <name>Matthew Di Ferrante</name>
+      <email>mattdf@users.noreply.github.com</email>
+    </contributor>
+    <contributor>
+      <name>Matthew Wampler-Doty</name>
+      <email>matthew.wampler.doty@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Maximilian Meister</name>
+      <email>mmeister@suse.de</email>
+    </contributor>
+    <contributor>
+      <name>Micah Zoltu</name>
+      <email>micah@zoltu.net</email>
+    </contributor>
+    <contributor>
+      <name>Michael Ruminer</name>
+      <email>michael.ruminer+github@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Miguel Mota</name>
+      <email>miguelmota2@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Miya Chen</name>
+      <email>miyatlchen@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Nchinda Nchinda</name>
+      <email>nchinda2@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Nick Dodson</name>
+      <email>silentcicero@outlook.com</email>
+    </contributor>
+    <contributor>
+      <name>Nick Johnson</name>
+      <email>arachnid@notdot.net</email>
+    </contributor>
+    <contributor>
+      <name>Nicolas Guillaume</name>
+      <email>gunicolas@sqli.com</email>
+    </contributor>
+    <contributor>
+      <name>Noman</name>
+      <email>noman@noman.land</email>
+    </contributor>
+    <contributor>
+      <name>Oli Bye</name>
+      <email>olibye@users.noreply.github.com</email>
+    </contributor>
+    <contributor>
+      <name>Paul Litvak</name>
+      <email>litvakpol@012.net.il</email>
+    </contributor>
+    <contributor>
+      <name>Paulo L F Casaretto</name>
+      <email>pcasaretto@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Paweł Bylica</name>
+      <email>chfast@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Peter Pratscher</name>
+      <email>pratscher@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Petr Mikusek</name>
+      <email>petr@mikusek.info</email>
+    </contributor>
+    <contributor>
+      <name>Péter Szilágyi</name>
+      <email>peterke@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>RJ Catalano</name>
+      <email>catalanor0220@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Ramesh Nair</name>
+      <email>ram@hiddentao.com</email>
+    </contributor>
+    <contributor>
+      <name>Ricardo Catalinas Jiménez</name>
+      <email>r@untroubled.be</email>
+    </contributor>
+    <contributor>
+      <name>Ricardo Domingos</name>
+      <email>ricardohsd@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Richard Hart</name>
+      <email>richardhart92@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Rob</name>
+      <email>robert@rojotek.com</email>
+    </contributor>
+    <contributor>
+      <name>Robert Zaremba</name>
+      <email>robert.zaremba@scale-it.pl</email>
+    </contributor>
+    <contributor>
+      <name>Russ Cox</name>
+      <email>rsc@golang.org</email>
+    </contributor>
+    <contributor>
+      <name>Rémy Roy</name>
+      <email>remyroy@remyroy.com</email>
+    </contributor>
+    <contributor>
+      <name>S. Matthew English</name>
+      <email>s-matthew-english@users.noreply.github.com</email>
+    </contributor>
+    <contributor>
+      <name>Shintaro Kaneko</name>
+      <email>kaneshin0120@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Sorin Neacsu</name>
+      <email>sorin.neacsu@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Stein Dekker</name>
+      <email>dekker.stein@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Steve Waldman</name>
+      <email>swaldman@mchange.com</email>
+    </contributor>
+    <contributor>
+      <name>Steven Roose</name>
+      <email>stevenroose@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Taylor Gerring</name>
+      <email>taylor.gerring@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Thomas Bocek</name>
+      <email>tom@tomp2p.net</email>
+    </contributor>
+    <contributor>
+      <name>Ti Zhou</name>
+      <email>tizhou1986@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Tosh Camille</name>
+      <email>tochecamille@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Valentin Wüstholz</name>
+      <email>wuestholz@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Victor Farazdagi</name>
+      <email>simple.square@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Victor Tran</name>
+      <email>vu.tran54@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Viktor Trón</name>
+      <email>viktor.tron@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Ville Sundell</name>
+      <email>github@solarius.fi</email>
+    </contributor>
+    <contributor>
+      <name>Vincent G</name>
+      <email>caktux@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Vitalik Buterin</name>
+      <email>v@buterin.com</email>
+    </contributor>
+    <contributor>
+      <name>Vitaly V</name>
+      <email>vvelikodny@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Vivek Anand</name>
+      <email>vivekanand1101@users.noreply.github.com</email>
+    </contributor>
+    <contributor>
+      <name>Vlad Gluhovsky</name>
+      <email>gluk256@users.noreply.github.com</email>
+    </contributor>
+    <contributor>
+      <name>Yohann Léon</name>
+      <email>sybiload@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Yoichi Hirai</name>
+      <email>i@yoichihirai.com</email>
+    </contributor>
+    <contributor>
+      <name>Yondon Fu</name>
+      <email>yondon.fu@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Zach</name>
+      <email>zach.ramsay@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Zahoor Mohamed</name>
+      <email>zahoor@zahoor.in</email>
+    </contributor>
+    <contributor>
+      <name>Zoe Nolan</name>
+      <email>github@zoenolan.org</email>
+    </contributor>
+    <contributor>
+      <name>Zsolt Felföldi</name>
+      <email>zsfelfoldi@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>am2rican5</name>
+      <email>am2rican5@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>ayeowch</name>
+      <email>ayeowch@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>b00ris</name>
+      <email>b00ris@mail.ru</email>
+    </contributor>
+    <contributor>
+      <name>bailantaotao</name>
+      <email>Edwin@maicoin.com</email>
+    </contributor>
+    <contributor>
+      <name>baizhenxuan</name>
+      <email>nkbai@163.com</email>
+    </contributor>
+    <contributor>
+      <name>bloonfield</name>
+      <email>bloonfield@163.com</email>
+    </contributor>
+    <contributor>
+      <name>changhong</name>
+      <email>changhong.yu@shanbay.com</email>
+    </contributor>
+    <contributor>
+      <name>evgk</name>
+      <email>evgeniy.kamyshev@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>ferhat elmas</name>
+      <email>elmas.ferhat@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>holisticode</name>
+      <email>holistic.computing@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>jtakalai</name>
+      <email>juuso.takalainen@streamr.com</email>
+    </contributor>
+    <contributor>
+      <name>ken10100147</name>
+      <email>sunhongping@kanjian.com</email>
+    </contributor>
+    <contributor>
+      <name>ligi</name>
+      <email>ligi@ligi.de</email>
+    </contributor>
+    <contributor>
+      <name>mark.lin</name>
+      <email>mark@maicoin.com</email>
+    </contributor>
+    <contributor>
+      <name>necaremus</name>
+      <email>necaremus@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>njupt-moon</name>
+      <email>1015041018@njupt.edu.cn</email>
+    </contributor>
+    <contributor>
+      <name>nkbai</name>
+      <email>nkbai@163.com</email>
+    </contributor>
+    <contributor>
+      <name>rhaps107</name>
+      <email>dod-source@yandex.ru</email>
+    </contributor>
+    <contributor>
+      <name>slumber1122</name>
+      <email>slumber1122@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>sunxiaojun2014</name>
+      <email>sunxiaojun-xy@360.cn</email>
+    </contributor>
+    <contributor>
+      <name>terasum</name>
+      <email>terasum@163.com</email>
+    </contributor>
+    <contributor>
+      <name>tsarpaul</name>
+      <email>Litvakpol@012.net.il</email>
+    </contributor>
+    <contributor>
+      <name>xiekeyang</name>
+      <email>xiekeyang@users.noreply.github.com</email>
+    </contributor>
+    <contributor>
+      <name>yoza</name>
+      <email>yoza.is12s@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>ΞTHΞЯSPHΞЯΞ</name>
+      <email>{viktor.tron,nagydani,zsfelfoldi}@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Максим Чусовлянов</name>
+      <email>mchusovlianov@gmail.com</email>
+    </contributor>
+  </contributors>
+
+  <issueManagement>
+    <system>GitHub Issues</system>
+    <url>https://github.com/ethereum/go-ethereum/issues/</url>
+  </issueManagement>
+
+  <scm>
+    <url>https://github.com/ethereum/go-ethereum</url>
+  </scm>
+</project>
